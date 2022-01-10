@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'role_id',
-        'tgl_lahir'
+        'tgl_lahir',
+        'kecamatan_id'
     ];
 
 

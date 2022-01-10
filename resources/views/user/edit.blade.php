@@ -63,6 +63,14 @@
                                 </div>
                             </div>
                     @enderror
+                    <div class="form-group">
+                        <select name="kecamatan_id" id="" class="form-control">
+                            <option value="">Pilih Kecamatan</option>
+                            @foreach (App\Models\Kecamatan::all() as $item)
+                                <option value="{{ $item->id }}" {{$item->id == $user->kecamatan_id ? 'selected' : ''}}>{{ $item->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     <div class="form-group mt-2">
                         <button class="btn btn-primary">Store</button>
                     </div>

@@ -55,6 +55,14 @@
                             @endforeach
                         </select>
                     </div>
+                    <div class="form-group">
+                        <select name="kecamatan_id" id="" class="form-control">
+                            <option value="">Pilih Kecamatan</option>
+                            @foreach (App\Models\Kecamatan::all() as $item)
+                                <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                     @error('role')
                             <div class="form-group mt-2">
                                 <div class="alert alert-danger">
